@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html ng-app="InfoDisplayWebApp" ng-controller="homeController">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT InfoDisplay</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+</head>
+<body ng-style="{'background-color': backgroundColor}">
+
+    <div class="container">
+        <h1>{{infoMessage}}</h1>
+        <div class="input-group input-group-lg col-xs-12 col-md-8 col-lg-6">
+            <input name="message" type="text" ng-model="message" ng-change="inputChange(obj)" class="form-control" aria-describedby="sizing-addon1" />
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery-1.9.0.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.2.0.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/Controllers/HomeController.js"></script>
+    <script src="~/Scripts/InfoDisplayWebApp.js"></script>
+</body>
+</html>
